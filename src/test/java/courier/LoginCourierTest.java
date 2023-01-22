@@ -5,7 +5,6 @@ import org.example.courier.Courier;
 import org.example.courier.CourierChecks;
 import org.example.courier.CourierClient;
 import org.example.courier.CourierGenerator;
-import org.junit.After;
 import org.junit.Test;
 
 public class LoginCourierTest {
@@ -13,7 +12,6 @@ public class LoginCourierTest {
     private final CourierGenerator generator = new CourierGenerator();
     private final CourierClient client = new CourierClient();
     private final CourierChecks checks = new CourierChecks();
-    private int courierId;
 
     @Test
     public void loginCourier(){
@@ -46,11 +44,4 @@ public class LoginCourierTest {
         checks.loginWithoutPasswordFailed(response);
     }
 
-    @After
-    public void deleteCourier(){
-        if (courierId > 0){
-            Response responseDelete = client.deleteCourier(courierId);
-            checks.deleteSuccessfully(responseDelete);
-        }
-    }
 }

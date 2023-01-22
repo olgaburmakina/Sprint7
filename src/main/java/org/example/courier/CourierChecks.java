@@ -21,6 +21,13 @@ public class CourierChecks {
                 .statusCode(HTTP_CONFLICT);
     }
 
+    public void creationWithoutLoginFailed(Response response){
+        response.then().log().all()
+                .assertThat().body("message", equalTo("Недостаточно данных для создания учетной записи"))
+                .and()
+                .statusCode(HTTP_BAD_REQUEST);
+    }
+
     public void creationWithoutPasswordFailed(Response response){
         response.then().log().all()
                 .assertThat().body("message", equalTo("Недостаточно данных для создания учетной записи"))

@@ -5,6 +5,7 @@ import org.example.courier.Courier;
 import org.example.courier.CourierChecks;
 import org.example.courier.CourierClient;
 import org.example.courier.CourierGenerator;
+import org.junit.After;
 import org.junit.Test;
 
 public class CreateCourierTest {
@@ -15,13 +16,13 @@ public class CreateCourierTest {
 
     @Test
     public void createCourier() {
-        Courier courier = generator.random();
-        Response response = client.createCourier(courier);
-        checks.createdSuccessfully(response);
-        courier.setFirstName(null);
-        Response responseId = client.login(courier);
+        Courier courier = generator.random(); //создали рандомный логин
+        Response response = client.createCourier(courier); //создали курьера
+        checks.createdSuccessfully(response); //проверили ответ
+        courier.setFirstName(null); //убрали ненужное для логина поле
+        Response responseId = client.login(courier); //залогинились в созданный аккаунт
         responseId.then().log().all();
-        courierId = responseId.path("id");
+        courierId = responseId.path("id"); //вычислили курьера по айди
     }
 
     @Test
@@ -30,6 +31,13 @@ public class CreateCourierTest {
         client.createCourier(courier);
         Response response = client.createCourier(courier);
         checks.creationFailed(response);
+    }
+    @Test
+    public void createWithoutLogin() {
+        Courier courier = generator.generic();
+        courier.setLogin(null);
+        Response response = client.createCourier(courier);
+        checks.creationWithoutLoginFailed(response);
     }
 
     @Test
@@ -40,4 +48,11 @@ public class CreateCourierTest {
         checks.creationWithoutPasswordFailed(response);
     }
 
+    @After
+    public void deleteCourier(){
+        if (courierId > 0){
+            Response responseDelete = client.deleteCourier(courierId);
+            checks.deleteSuccessfully(responseDelete);
+        }
+    }
 }

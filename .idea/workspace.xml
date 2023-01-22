@@ -5,21 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ed1ed6a-5c42-4855-8646-ca13ca5b9020" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/courier/Courier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/courier/Courier.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/courier/CourierChecks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/courier/CourierChecks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/courier/CourierClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/courier/CourierClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/courier/CourierGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/courier/CourierGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/order/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/order/OrderChecks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/order/OrderChecks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/order/OrderClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/order/OrderClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/courier/CreateCourierTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/courier/CreateCourierTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/courier/LoginCourierTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/courier/LoginCourierTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/order/CreateOrderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/order/CreateOrderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/order/OrderListInResponseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/order/OrderListInResponseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +40,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.LoginCourierTest">
+  <component name="RunManager" selected="JUnit.CreateCourierTest.createWithoutLogin">
     <configuration name="CreateCourierTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Sprint7" />
       <extension name="coverage">
@@ -63,6 +52,22 @@
       <option name="PACKAGE_NAME" value="courier" />
       <option name="MAIN_CLASS_NAME" value="courier.CreateCourierTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreateCourierTest.createWithoutLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sprint7" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="courier.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="courier" />
+      <option name="MAIN_CLASS_NAME" value="courier.CreateCourierTest" />
+      <option name="METHOD_NAME" value="createWithoutLogin" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -114,6 +119,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CreateCourierTest.createWithoutLogin" />
         <item itemvalue="JUnit.LoginCourierTest" />
         <item itemvalue="JUnit.CreateCourierTest" />
         <item itemvalue="JUnit.OrderListInResponseTest" />
